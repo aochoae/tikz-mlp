@@ -1,5 +1,7 @@
 # Multilayer Perceptron with TikZ
 
+[![DOI](https://zenodo.org/badge/170640957.svg)](https://zenodo.org/badge/latestdoi/170640957)
+
 ## Requirements
 
 * LuaTeX, Version 0.95.0
