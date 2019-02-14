@@ -1,0 +1,26 @@
+\RequirePackage{luatex85}
+\documentclass{standalone}
+
+\usepackage{fontspec, unicode-math}
+\setsansfont[Scale=MatchLowercase]{TeX Gyre Heros}
+\setmathfont{TeX Gyre Termes Math}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+
+\tikzset{
+  every picture/.style={font={\sffamily\normalsize}, >=stealth},
+  every pin edge/.style={black}}
+
+\begin{document}
+
+  \begin{tikzpicture}[neuron/.style={draw, circle, font=\Huge, minimum size=1.5cm}]
+    \node[neuron,
+      pin={[pin distance=1cm]135:$x_{1}$},
+      pin={[pin distance=1cm]165:$x_{n}$},
+      pin={[pin edge={{Circle[open, length=5pt]}-}, pin distance=1cm]195:$x_{n+1}$},
+      pin={[pin edge={{Circle[open, length=5pt]}-}, pin distance=1cm]225:$x_{m}$},
+      pin={[pin edge={->}, pin distance=1cm]right:$y$}] {$\vartheta$};
+  \end{tikzpicture}
+
+\end{document}

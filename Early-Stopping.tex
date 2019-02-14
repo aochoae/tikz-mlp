@@ -1,0 +1,33 @@
+\RequirePackage{luatex85}
+\documentclass{standalone}
+
+\usepackage{fontspec, unicode-math}
+\setsansfont[Scale=MatchLowercase]{TeX Gyre Heros}
+\setmathfont{TeX Gyre Termes Math}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.14}
+
+\tikzset{
+  every picture/.style={font={\sffamily\normalsize}, >=stealth},
+  every pin edge/.style={black}}
+
+\begin{document}
+
+  \begin{tikzpicture}
+    \begin{axis}[
+      legend cell align=left,
+      ylabel = {Error},
+      xlabel = {Epoch}]
+
+      \addplot[smooth, thick] coordinates {
+        (0, 5) (1, 3.1) (2.5, 2) (5, 3)};
+      \addplot[smooth, thick, dashed] coordinates {
+        (0, 4.5) (0.5, 2.5) (1, 1.5) (2, 1) (5, 0.5)};
+      \addplot[mark=*, mark size=2.5pt] coordinates {(2.5, 2)};
+
+      \legend{Validation error, Training error, Optimal model}
+    \end{axis}
+  \end{tikzpicture}
+
+\end{document}

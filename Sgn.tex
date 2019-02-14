@@ -1,0 +1,31 @@
+\RequirePackage{luatex85}
+\documentclass{standalone}
+
+\usepackage{fontspec, unicode-math}
+\setsansfont[Scale=MatchLowercase]{TeX Gyre Heros}
+\setmathfont{TeX Gyre Termes Math}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.14}
+
+\tikzset{
+  every picture/.style={font={\sffamily\normalsize}, >=stealth},
+  every pin edge/.style={black}}
+
+\begin{document}
+
+  \begin{tikzpicture}
+    \begin{axis}[%
+        xmax = 5,
+        xmin = -5,
+        ymax = 1.5,
+        ymin = -1.5,
+        plot/.style={thick, mark=*}]
+
+      \addplot[plot] coordinates{(-5.5, -1) (0, -1)};
+      \addplot[plot, mark options={fill=white}] coordinates{(0, 1) (5.5, 1)};
+      \addplot[thick, no marks, dashed] coordinates{(0, -1) (0, 1)};
+    \end{axis}
+  \end{tikzpicture}
+
+\end{document}
