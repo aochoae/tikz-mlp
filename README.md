@@ -20,6 +20,6 @@
 
 Copyright 2019 Luis A. Ochoa
 
-Artificial Neural Networks with TikZ is licensed under a
+Multilayer Perceptron with TikZ is licensed under a
 Creative Commons Attribution 4.0 International License.
 See [LICENSE](LICENSE) for the full lecense text.
