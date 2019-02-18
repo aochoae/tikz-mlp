@@ -12,6 +12,17 @@
 * Font TeX Gyre Heros
 * Font TeX Gyre Termes Math
 
+## BibTeX
+
+    @misc{Ochoa2019_2564472,
+      author = {Luis A. Ochoa},
+      title  = {Multilayer Perceptron with TikZ},
+      month  = feb,
+      year   = 2019,
+      doi    = {10.5281/zenodo.2564472},
+      url    = {https://doi.org/10.5281/zenodo.2564472}
+    }
+
 ## Build
 
     make build
